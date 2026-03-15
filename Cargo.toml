@@ -22,6 +22,6 @@ priority = "optional"
 assets = [
     ["target/release/clip-keeper", "usr/bin/clip-keeper", "755"],
     ["clip-keeper.desktop", "usr/share/applications/clip-keeper.desktop", "644"],
+    ["clip-keeper.service", "lib/systemd/user/clip-keeper.service", "644"],
     ["README.md", "usr/share/doc/clip-keeper/README.md", "644"],
 ]
- 
