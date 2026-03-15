@@ -1,0 +1,27 @@
+[package]
+name = "clip-keeper"
+version = "0.9.0"
+edition = "2024"
+description = "A lightweight Linux clipboard manager"
+license = "MIT"
+
+[dependencies]
+arboard = "3"
+rusqlite = { version = "0.31", features = ["bundled"] }
+eframe = "0.27"
+egui = "0.27"
+chrono = "0.4"
+
+[package.metadata.deb]
+maintainer = "Your Name <you@email.com>"
+copyright = "2025, Your Name"
+extended-description = "Clipboard manager that stores history in SQLite with a dark themed GUI."
+depends = "$auto"
+section = "utility"
+priority = "optional"
+assets = [
+    ["target/release/clip-keeper", "usr/bin/clip-keeper", "755"],
+    ["clipboard-manager.desktop", "usr/share/applications/clip-keeper.desktop", "644"],
+    ["README.md", "usr/share/doc/clip-keeper/README.md", "644"],
+]
+ 

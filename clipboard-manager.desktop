@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Clip Keeper
+Comment=Lightweight clipboard manager
+Exec=clip-keep
+Icon=edit-paste
+Type=Application
+Categories=Utility;
+StartupNotify=true
