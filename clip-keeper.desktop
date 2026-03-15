@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Clip Keeper
+Comment=Lightweight clipboard manager
+Exec=/usr/bin/clip-keeper
+Icon=edit-paste
+Type=Application
+Categories=Utility;
+StartupNotify=true
+Terminal=false

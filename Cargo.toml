@@ -21,7 +21,7 @@ section = "utility"
 priority = "optional"
 assets = [
     ["target/release/clip-keeper", "usr/bin/clip-keeper", "755"],
-    ["clipboard-manager.desktop", "usr/share/applications/clip-keeper.desktop", "644"],
+    ["clip-keeper.desktop", "usr/share/applications/clip-keeper.desktop", "644"],
     ["README.md", "usr/share/doc/clip-keeper/README.md", "644"],
 ]
  
