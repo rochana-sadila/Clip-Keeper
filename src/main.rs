@@ -6,7 +6,9 @@ use std::sync::{Arc, Mutex};
 use std::thread;
 use std::time::Duration;
 
+// ─────────────────────────────────────────────
 //  Database
+// ─────────────────────────────────────────────
 
 fn db_path() -> String {
     let home = std::env::var("HOME").unwrap_or_else(|_| ".".to_string());
@@ -64,7 +66,9 @@ fn clear_all_clips(conn: &Connection) -> SqlResult<()> {
     Ok(())
 }
 
+// ─────────────────────────────────────────────
 //  Data types
+// ─────────────────────────────────────────────
 
 #[derive(Clone, Debug)]
 struct ClipEntry {
@@ -97,7 +101,9 @@ impl AppState {
     }
 }
 
+// ─────────────────────────────────────────────
 //  Background clipboard watcher
+// ─────────────────────────────────────────────
 
 fn start_watcher(state: Arc<Mutex<AppState>>) {
     thread::spawn(move || {
@@ -123,7 +129,9 @@ fn start_watcher(state: Arc<Mutex<AppState>>) {
     });
 }
 
+// ─────────────────────────────────────────────
 //  GUI
+// ─────────────────────────────────────────────
 
 struct ClipboardApp {
     state: Arc<Mutex<AppState>>,
@@ -280,7 +288,9 @@ impl eframe::App for ClipboardApp {
     }
 }
 
+// ─────────────────────────────────────────────
 //  Entry point
+// ─────────────────────────────────────────────
 
 fn main() {
     let state = Arc::new(Mutex::new(AppState::new()));
